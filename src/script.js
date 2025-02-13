@@ -8,8 +8,10 @@ const resizeButton = document.getElementById ('resizeButton');
 const canvas = document.getElementById ('canvas');
 const ctx = canvas.getContext ('2d');
 const imageSizeLabel = document.getElementById ('imageSizeLabel');
+const downloadLink = document.getElementById ('downloadLink');
 
 let originalImage = new Image ();
+let originalFileName = '';
 
 // 画像を読み込んでCanvasに表示
 imageInput.addEventListener ('change', function (event) {
@@ -18,6 +20,7 @@ imageInput.addEventListener ('change', function (event) {
     const reader = new FileReader ();
     reader.onload = function (e) {
       originalImage.src = e.target.result;
+      originalFileName = file.name.split ('.')[0];
     };
     reader.readAsDataURL (file);
   }
@@ -65,5 +68,11 @@ resizeButton.addEventListener ('click', function () {
     ctx.drawImage (originalImage, 0, 0, newWidth, newHeight); // 新しいサイズで画像を描画
 
     imageSizeLabel.textContent = `(${newWidth},${newHeight})`;
+
+    const dataURL = canvas.toDataURL ('image/png');
+    downloadLink.href = dataURL;
+    const filename = `${originalFileName}_resize.png`; // 元の名前に "_resize" を追加
+    downloadLink.setAttribute ('download', filename);
+    downloadLink.style.display = 'inline'; // ダウンロードボタンを表示
   }
 });
