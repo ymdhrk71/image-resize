@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IMAGE-RESIZE</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <h1>IMAGE-RESIZE</h1>
-  
-  <input type="file" id="imageInput" accept="image/*">
-  <br><br>
-  
-  <label>　幅(x): <input type="number" id="widthInput" value=""></label>
-  <label>　幅(倍): <input type="number" id="widthscaleInput" value="6"></label>
-
-  <br><br>
-
-  <label>高さ(y): <input type="number" id="heightInput" value=""></label>
-  <label>高さ(倍): <input type="number" id="heightscaleInput" value="6"></label>
-
-  <br><br>
-
-  <button id="resizeButton">サイズ変更</button>
-  
-  <br><br>
-  <canvas id="canvas"></canvas>
-
-  <p>画像サイズ: <span id="imageSizeLabel">(???,???)</span></p>
-
-  <script src="script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IMAGE-RESIZE</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>IMAGE-RESIZE</h1>
+        <input type="file" id="imageInput" accept="image/*">
+        <br>
+        <br>
+        <label>　幅(x):
+            <input type="number" id="widthInput" value="">
+        </label>
+        <label>　幅(倍):
+            <input type="number" id="widthscaleInput" value="6">
+        </label>
+        <br>
+        <br>
+        <label>高さ(y):
+            <input type="number" id="heightInput" value="">
+        </label>
+        <label>高さ(倍):
+            <input type="number" id="heightscaleInput" value="6">
+        </label>
+        <br>
+        <br>
+        <button id="resizeButton">サイズ変更</button>
+        <br>
+        <br>
+        <canvas id="canvas"></canvas>
+        <p>画像サイズ:
+            <span id="imageSizeLabel">(???,???)</span>
+        </p>
+        <script src="script.js"></script>
+    </body>
 </html>
