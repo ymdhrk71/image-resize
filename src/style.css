@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #f4f4f4;
+}
+
+input, button {
+  margin: 10px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+canvas {
+  border: 1px solid black;
+  margin-top: 10px;
+}
