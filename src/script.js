@@ -32,6 +32,8 @@ originalImage.onload = function () {
   const originalWidth = originalImage.width;
   const originalHeight = originalImage.height;
 
+  imageSizeLabel.textContent = `(${originalWidth},${originalHeight})`;
+
   // 初期表示時に画像をそのまま表示（元のサイズ）
   canvas.width = originalWidth;
   canvas.height = originalHeight;
@@ -40,8 +42,6 @@ originalImage.onload = function () {
   // 幅と高さの入力フィールドに元のサイズを設定
   widthInput.value = originalWidth;
   heightInput.value = originalHeight;
-
-  imageSizeLabel.textContent = `(${originalWidth},${originalHeight})`;
 };
 
 // サイズ変更ボタンの動作
