@@ -1,17 +1,47 @@
+@charset "UTF-8";
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Hiragino Maru Gothic";
   text-align: center;
-  margin-top: 20px;
-  background-color: #f4f4f4;
+  background-color: #000000;
+  padding-bottom: 32px;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 64px;
+  padding-top: 32px;
 }
 
 input, button {
-  margin: 10px;
+  margin: 16px;
   padding: 8px;
   font-size: 16px;
+  border-radius: 8px;
+}
+
+.file {
+  margin-top: 64px;
+  border: 2px solid rgb(81, 81, 81);
+  width: 60%;
+}
+
+.number {
+  border: 2px solid rgb(81, 81, 81);
+  text-align: right;
+  width: 15%;
+}
+
+.button {
+  border: 2px solid rgb(81, 81, 81);
+  background-color: gray;
+}
+
+.button:hover {
+  background-color: darkgray;
 }
 
 canvas {
-  border: 1px solid black;
+  border: 2px solid rgb(81, 81, 81);
   margin-top: 10px;
 }
