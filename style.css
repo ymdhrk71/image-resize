@@ -4,7 +4,7 @@ body {
   font-family: "Hiragino Maru Gothic";
   text-align: center;
   color: white;
-  background-color: #000000;
+  background-color: #1a1a1a;
   padding-bottom: 32px;
 }
 
@@ -23,26 +23,40 @@ input, button {
 
 .file {
   margin-top: 64px;
-  border: 2px solid rgb(81, 81, 81);
+  border: 2px solid #666666;
   width: 60%;
+  color: white;
+}
+
+.file::file-selector-button {
+  background-color: #666666;
+  color: white;
+  border-radius: 8px;
+  border: 2px solid white;
+}
+
+.file::file-selector-button:hover {
+  background-color: #333333;
 }
 
 .number {
-  border: 2px solid rgb(81, 81, 81);
+  border: 2px solid #666666;
   text-align: right;
   width: 15%;
+  color: white;
 }
 
 .button {
-  border: 2px solid rgb(81, 81, 81);
-  background-color: gray;
+  border: 2px solid white;
+  background-color: #666666;
+  color: white;
 }
 
 .button:hover {
-  background-color: darkgray;
+  background-color: #333333;
 }
 
 canvas {
-  border: 2px solid rgb(81, 81, 81);
+  border: 2px solid #666666;
   margin-top: 10px;
 }
